@@ -1,0 +1,312 @@
+/*---------Общие правила и классы---------*/
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Regular.ttf) format('ttf');
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    background: #f0f0f0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.image-container {
+    position: relative;
+}
+
+.navigation {
+    list-style: none;
+}
+
+/*--------------------------------------*/
+
+.left-aside {
+    height: 700px;
+    padding-bottom: 40px;
+    text-align: left;
+}
+
+.right-aside {
+    width: 350px;
+}
+
+.left-aside,
+.right-aside {
+    position: unset;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+}
+
+.logo {
+    position: absolute;
+    max-width: 280px;
+    min-width: 250px;
+    padding: 20px;
+    border-radius: 200px;
+    background: #ffffff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.oblojka {
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: 45px;
+    padding-top: 45px;
+}
+
+.oblojka::before {
+    content: "Алые Паруса";
+
+    position: absolute;
+    top: 16px;
+    width: 250px;
+    height: 30px;
+
+    background-color: #b80f0f;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.oblojka::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    width: 250px;
+    height: 30px;
+
+    background-color: #b80f0f;
+    text-align: center;
+    z-index: 2;
+}
+
+.table {
+    padding: 20px 50px;
+    background: #f0f0f0;
+}
+
+.table tr {
+    height: 45px;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.table td:not(.bold) {
+    vertical-align: top;
+    text-align: left;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.wiki {
+    display: block;
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+    color: #b80f0f;
+    text-decoration: none;
+    border-radius: 10px;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    -webkit-transition: all 1s linear;
+}
+
+.wiki:hover,
+.wiki:focus {
+    background: #b80f0f;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.wiki:active {
+    opacity: 0.5;
+}
+
+.titles {
+    background-color: #b80f0f;
+    text-align: center;
+}
+
+.titles h1,
+.titles h2 {
+    margin: 0;
+    padding: 20px;
+}
+
+.titles h1 {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.titles h2 {
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.all-content {
+    width: 100%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    font-family: "Roboto", sans-serif;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+
+.all-content p {
+    padding: 0 20px;
+    font-size: 18px;
+}
+
+.navigation {
+    margin: 0;
+    padding: 340px 0 0 20px;
+}
+
+.navigation a {
+    display: block;
+    padding-top: 15px;
+    color: #b80f0f;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navigation a[href]:hover,
+.navigation a[href]:focus {
+    opacity: 0.6;
+}
+
+.navigation a[href]:active {
+    opacity: 0.4;
+}
+
+.navigation a:not([href]) {
+    color: #0019f56b
+}
+
+.comment {
+    margin-top: 40px;
+    padding-left: 20px;
+}
+
+.footer {
+    padding: 20px 30px;
+    background: #b80f0f;
+}
+
+.copyright {
+    margin: 0;
+}
+
+
+@media (min-width: 768px) {
+
+    .asides-wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 40px;
+    }
+
+    .left-aside {
+        width: 250px;
+        height: 645px;
+        padding: 20px;
+        text-align: center;
+        top: 160px;
+    }
+
+    .right-aside {
+        top: 15px;
+        right: 0;
+        width: 350px;
+    }
+
+    .left-aside,
+    .right-aside {
+        position: relative;
+    }
+
+    .logo {
+        top: -150px;
+        left: 0;
+    }
+
+    .titles h1 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    .titles h2 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .all-content {
+        margin: auto;
+    }
+
+    .all-content p {
+        padding: 0 50px;
+    }
+
+    .navigation {
+        padding: 150px 0 0 0;
+    }
+
+    .comment {
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 1440px) {
+
+    .asides-wrapper {
+        padding-bottom: 0;
+    }
+
+    .all-content {
+        width: 50%;
+    }
+
+    .left-aside,
+    .right-aside {
+        position: absolute;
+    }
+
+    .left-aside {
+        top: 200px;
+        left: 2%;
+    }
+
+    .right-aside {
+        top: 60px;
+    }
+}
+
+@media (min-width: 1900px) {
+
+    .left-aside {
+        left: 90px;
+        width: 270px;
+    }
+
+    .logo {
+        width: 270px;
+    }
+
+    .right-aside {
+        right: 3%;
+    }
+}
